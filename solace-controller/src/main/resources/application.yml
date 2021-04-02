@@ -1,0 +1,8 @@
+solace:
+  java:
+    host: 192.168.65.3
+    msgVpn: default
+    clientUsername: default
+    clientPassword: default
+server:
+  port: 9999

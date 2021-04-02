@@ -1,0 +1,37 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input1:
+          destination: q.input1
+          binder: solace1
+          group: group
+        input2:
+          destination: q.input2
+          binder: solace2
+          group: group
+        output1:
+          destination: output/1
+          binder: solace1
+        output2:
+          destination: output/2
+          binder: solace2
+      binders:
+        solace1:
+          type: solace
+          environment:
+            solace:
+              java:
+                host: 192.168.65.3
+                msgVpn: v1
+                clientUsername: default
+                clientPassword: default
+        solace2:
+          type: solace
+          environment:
+            solace:
+              java:
+                host: 192.168.65.3
+                msgVpn: v2
+                clientUsername: default
+                clientPassword: default
